@@ -13,13 +13,18 @@
         <p>Petrographic Slide Index</p>
         <h1>岩芯薄片显微照片索引台</h1>
       </div>
-      <button id="exportBtn" type="button">导出观察清单</button>
+      <div class="mast-actions">
+        <p id="ioStatus" class="io-status" role="status"></p>
+        <label class="import-btn">导入台账<input id="importInput" type="file" accept="application/json,.json" hidden></label>
+        <button id="exportBtn" type="button">导出台账（仅已复核）</button>
+      </div>
     </header>
 
     <section class="layout">
       <form id="sampleForm" class="editor">
         <h2>样本录入</h2>
         <label>显微照片<input id="photoInput" type="file" accept="image/*"></label>
+        <label>采集人<input name="collector" required placeholder="张工"></label>
         <label>样本编号<input name="code" required placeholder="BX-17-03"></label>
         <label>采样地点<input name="location" placeholder="剖面东侧第二层"></label>
         <div class="pair">
